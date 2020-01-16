@@ -6,196 +6,454 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>530</width>
-    <height>382</height>
+    <width>549</width>
+    <height>385</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Video Downloader</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Video.png</normaloff>Video.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="labelURL">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
-      <width>91</width>
-      <height>41</height>
+      <width>551</width>
+      <height>391</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Video/Playlist URL:</string>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
-    <property name="textFormat">
-     <enum>Qt::PlainText</enum>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
-    <property name="wordWrap">
-     <bool>true</bool>
-    </property>
+    <widget class="QWidget" name="tabHome">
+     <attribute name="title">
+      <string>Home</string>
+     </attribute>
+     <widget class="QLabel" name="labelTitle">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>0</y>
+        <width>291</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>26</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Video/Playlist URL</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineHomeEditURL">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>90</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGitHub">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>290</y>
+        <width>461</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Check out our GitHub Repo at https://github.com/python-20/video-downloader</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnHomeGetVideo">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>130</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Get Video</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="capy">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>541</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <zorder>capy</zorder>
+     <zorder>labelTitle</zorder>
+     <zorder>lineHomeEditURL</zorder>
+     <zorder>labelGitHub</zorder>
+     <zorder>btnHomeGetVideo</zorder>
+    </widget>
+    <widget class="QWidget" name="tabYouTubeVideo">
+     <attribute name="title">
+      <string>YouTube Videos</string>
+     </attribute>
+     <widget class="QLabel" name="labelYTV_URL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Video URL</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditURL">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>361</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFileType">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>File type: </string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButtonQuality">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>211</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnOK">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>10</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>OK</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>521</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnClear">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>40</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditDownloadLocation">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>100</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>100</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>iconmonstr-folder-1-64.png</normaloff>iconmonstr-folder-1-64.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDownload">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>280</y>
+        <width>231</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Download Video</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Quality</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Download Location:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelThumbnail">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>231</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSlider">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>70</y>
+        <width>371</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>5</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksAbove</enum>
+      </property>
+      <property name="tickInterval">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelVideoTitle">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>140</y>
+        <width>211</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test123</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabYouTubePlaylists">
+     <attribute name="title">
+      <string>YouTube Playlists</string>
+     </attribute>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Playlist URL</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditURL_3">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>361</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnOK_3">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>10</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>OK</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnClear_2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>70</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Download Location:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditDownloadLocation_2">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>40</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>40</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>iconmonstr-folder-1-64.png</normaloff>iconmonstr-folder-1-64.png</iconset>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabOther">
+     <attribute name="title">
+      <string>Other</string>
+     </attribute>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>URL</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
-   <widget class="QLabel" name="labelFileType">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>101</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>File type / quality: </string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEditURL">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>10</y>
-      <width>361</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QToolButton" name="toolButtonQuality">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>50</y>
-      <width>25</width>
-      <height>19</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>...</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>70</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Playlist</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnDownloadLocation">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>140</y>
-      <width>111</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Download Location:</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnDownload">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>280</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Download</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnClear">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>310</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Clear</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEditDownloadLocation">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>170</y>
-      <width>221</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QProgressBar" name="progressBar">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>100</y>
-      <width>511</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="value">
-     <number>24</number>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnOK">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>10</y>
-      <width>41</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>OK</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelThumbnail">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>170</y>
-      <width>231</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelVideoTitle">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>140</y>
-      <width>211</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>530</width>
-     <height>21</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="help.qrc"/>
+ </resources>
  <connections/>
 </ui>
